@@ -17,6 +17,11 @@ public class CertificateUpdateGenerator {
     }
 
     public Stream<CertificateUpdate> generateQuotes() {
+        // check for non-positive inputs to prevent errors.
+        if (threads <= 0 || quotes <= 0) {
+            return Stream.empty();
+        }
+        
         ExecutorService executor = Executors.newFixedThreadPool(threads);
 
         List<Future<CertificateUpdate>> updateList = new ArrayList<Future<CertificateUpdate>>();
