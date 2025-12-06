@@ -18,6 +18,7 @@ public class App {
                 certificateUpdate -> System.out.println(certificateUpdate.toString())
             );
             System.out.println("Generated " + quotes + " quotes using " + threads + " threads.");
+            return;
         }
         throw new RuntimeException("Expected number of threads and number of quotes. But got: " + java.util.Arrays.toString(args));
     }
