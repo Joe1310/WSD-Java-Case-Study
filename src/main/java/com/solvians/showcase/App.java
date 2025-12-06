@@ -19,6 +19,6 @@ public class App {
             );
             System.out.println("Generated " + quotes + " quotes using " + threads + " threads.");
         }
-        throw new RuntimeException("Expected number of threads and number of quotes. But got: " + args);
+        throw new RuntimeException("Expected number of threads and number of quotes. But got: " + java.util.Arrays.toString(args));
     }
 }
