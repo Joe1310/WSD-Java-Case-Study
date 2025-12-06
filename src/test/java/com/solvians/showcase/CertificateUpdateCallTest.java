@@ -26,7 +26,7 @@ public class CertificateUpdateCallTest {
         long timestamp = Long.parseLong(fields[0]);
 
         assertTrue(timestamp >= beforeCall && timestamp <= afterCall,
-                "Timestamp should be between the call start and end time");
+            "Timestamp should be between the call start and end time");
     }
 
     @Test
@@ -54,9 +54,9 @@ public class CertificateUpdateCallTest {
         double askPrice = Double.parseDouble(fields[4]);
 
         assertTrue(bidPrice >= 100.00 && bidPrice <= 200.00,
-                "Bid price should be between 100.00 and 200.00");
+            "Bid price should be between 100.00 and 200.00");
         assertTrue(askPrice >= 100.00 && askPrice <= 200.00,
-                "Ask price should be between 100.00 and 200.00");
+            "Ask price should be between 100.00 and 200.00");
     }
 
     @Test
@@ -68,9 +68,9 @@ public class CertificateUpdateCallTest {
         String[] fields = csv.split(",");
 
         assertTrue(fields[2].matches("\\d+\\.\\d{2}"),
-                "Bid price should have exactly two decimal places");
+            "Bid price should have exactly two decimal places");
         assertTrue(fields[4].matches("\\d+\\.\\d{2}"),
-                "Ask price should have exactly two decimal places");
+            "Ask price should have exactly two decimal places");
     }
 
     @Test
@@ -84,8 +84,8 @@ public class CertificateUpdateCallTest {
         int askSize = Integer.parseInt(fields[5]);
 
         assertTrue(bidSize >= 1000 && bidSize <= 5000,
-                "Bid size should be between 1000 and 5000");
+            "Bid size should be between 1000 and 5000");
         assertTrue(askSize >= 1000 && askSize <= 5000,
-                "Ask size should be between 1000 and 5000");
+            "Ask size should be between 1000 and 5000");
     }
 }
