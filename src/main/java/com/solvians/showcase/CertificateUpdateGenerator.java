@@ -28,7 +28,9 @@ public class CertificateUpdateGenerator {
 
         return updateList.stream().map(future -> {
             try {
-                return future.get();
+                CertificateUpdate certificate = future.get();
+                System.out.println("Certificate Properties: " + certificate.toString());
+                return certificate;
             } catch (Exception e) {
                 throw new RuntimeException("Error generating certificate update", e);
             }
